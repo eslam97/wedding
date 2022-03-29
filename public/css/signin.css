@@ -1,0 +1,128 @@
+/* style close btn */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--color_000);
+  transition: var(--transition);
+  z-index: 999;
+}
+@media (max-width: 700px) {
+  .close {
+    color: var(--color_fff);
+  }
+}
+.close:hover {
+  color: var(--main_color);
+}
+/* style flex img and form */
+.flex_img_form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 700px) {
+  .flex_img_form {
+    flex-direction: column;
+  }
+}
+.txt_inside_img {
+  width: 50%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../img/c.jpg);
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .txt_inside_img {
+    height: 300px;
+    width: 100%;
+  }
+}
+.txt_inside_img h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 40px;
+}
+.txt_inside_img p {
+  color: var(--color_fff);
+  font-weight: 600;
+  font-size: 17px;
+  margin-top: 20px;
+}
+.txt_inside_img::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #00000052;
+}
+/* style the form */
+form {
+  width: 49%;
+  text-align: center;
+  padding-right: 20px;
+}
+@media (max-width: 700px) {
+  form {
+    width: 100%;
+    padding: 50px 20px 0px;
+  }
+}
+form .logo {
+  color: var(--main_color);
+  font-family: "Cookie", cursive;
+  font-size: 30px;
+}
+form h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 30px;
+  margin: 10px 0px;
+}
+form p {
+  color: var(--color_000);
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+form p a {
+  display: inline-block;
+  color: #767676;
+  border-bottom: 1px solid #767676;
+}
+form input {
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+  padding: 9px 5px;
+  border: none;
+  border-bottom: 1px solid #cccc;
+  font-family: "Nunito Sans", sans-serif;
+  transition: var(--transition);
+}
+form input:focus {
+  outline: none;
+  border-color: var(--main_color);
+}
+form button {
+  width: 100%;
+  padding: 12px 0px;
+  background-color: var(--main_color);
+  color: var(--color_fff);
+  border: none;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  transition: var(--transition);
+  cursor: pointer;
+}
+form button:hover {
+  transform: translateY(-2px);
+}

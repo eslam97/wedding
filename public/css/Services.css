@@ -1,0 +1,136 @@
+/* main_Services */
+.main_Services {
+  background-image: url(../img/a.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  animation-name: animate;
+  animation-direction: alternate-reverse;
+  animation-duration: 20s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+}
+@keyframes animate {
+  0% {
+    background-image: url(../img/About_img.jpg);
+  }
+  80% {
+    background-image: url(../img/blog.jpg);
+  }
+  100% {
+    background-image: url(../img/img_container_clinte.jpg);
+  }
+}
+.main_Services::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #0000002b;
+  z-index: -1;
+}
+.main_Services h2 {
+  color: var(--color_fff);
+  font-size: 60px;
+  font-family: var(--font-familt-d);
+}
+/* Services */
+.Services {
+  padding-top: 70px;
+  background-color: var(--color_fff);
+}
+.Services .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.Services .card {
+  position: relative;
+}
+.Services .txt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 90%;
+  width: 90%;
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff9;
+  transition: var(--transition);
+}
+.Services .card:hover .txt {
+  opacity: 1;
+}
+@media (max-width: 740px) {
+  .Services .txt {
+    opacity: 1;
+  }
+}
+.Services h3 {
+  font-family: var(--font-familt-d);
+  font-size: 30px;
+  font-weight: 100;
+}
+.Services a {
+  color: var(--color_000);
+  font-family: "Old Standard TT", serif;
+  font-weight: 500;
+}
+.Services a:hover {
+  color: var(--main_color);
+}
+
+/* ==================== QUESTIONS ==================== */
+.questions {
+  width: 60%;
+  margin: auto;
+  padding-top: 60px;
+}
+@media (max-width: 740px) {
+  .questions {
+    width: 100%;
+  }
+}
+.questions .hadding_q {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.questions__content {
+  overflow: hidden;
+  height: 0;
+}
+.questions__header {
+  border: 1px solid #a2783a3d;
+  padding: 10px;
+}
+.questions__description {
+  font-size: 15px;
+  padding: 10px 5px;
+}
+.questions__item,
+.questions__header,
+.questions__item-title,
+.questions__icon,
+.questions__description,
+.questions__content {
+  transition: 0.3s;
+}
+/* footer */
+footer {
+  margin-top: 90px;
+}

@@ -1,0 +1,54 @@
+.txt {
+  padding-top: 70px;
+}
+.txt h2 {
+  margin-bottom: 20px;
+}
+.txt ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 18px;
+  color: #505050;
+  margin-top: 20px;
+  font-weight: 300;
+}
+.grid_img {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(323px, 1fr));
+  gap: 20px;
+  margin-top: 70px;
+}
+.grid_img .card {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.grid_img i {
+  position: absolute;
+  left: 50%;
+  top: 120%;
+  transform: translate(-50%, -50%);
+  display: block;
+  color: var(--color_fff);
+  font-size: 20px;
+  font-weight: 100;
+  transition: var(--transition);
+}
+.grid_img .card:hover i {
+  top: 50%;
+}
+.grid_img .img {
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 3;
+}
+.grid_img img {
+  transition: var(--transition);
+}
+.grid_img .img:hover img {
+  transform: scale(1.1);
+}
+footer {
+  margin-top: 90px;
+}

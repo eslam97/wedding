@@ -1,0 +1,219 @@
+/* main_about */
+.main_about {
+  background-image: url(../img/About_img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 413px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.main_about::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #0000002b;
+  z-index: -1;
+}
+.main_about h2 {
+  color: var(--color_fff);
+  font-size: 60px;
+  font-family: var(--font-familt-d);
+}
+/* About */
+.About {
+  /* margin-top: 60px; */
+  padding: 100px 0px;
+  background-color: #fff;
+}
+.About .container {
+  display: flex;
+  flex-direction: column;
+}
+.About .txt {
+  width: 100%;
+}
+.About .txt h3 {
+  font-size: 20px;
+}
+.About .img {
+  width: 89%;
+  position: relative;
+  z-index: 2;
+  margin: 30px auto;
+}
+.About .img img {
+  transition: all 0.3s linear;
+}
+.About .img::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: -23px;
+  width: 90%;
+  height: 98%;
+  border: 10px solid rgba(245, 240, 236, 1);
+  z-index: -1;
+}
+.About .img:hover img {
+  transform: scale(0.95);
+}
+.About .img h4 {
+  font-family: var(--font-familt-d);
+  font-size: 40px;
+  position: absolute;
+  right: 20px;
+  bottom: -12px;
+  transform: rotate(-29deg);
+}
+@media (min-width: 740px) {
+  .About .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .About .txt {
+    width: 60%;
+  }
+  .About .img {
+    width: 35%;
+  }
+}
+/* Wedding_dates */
+.Wedding_dates {
+  background-color: var(--main_background_color);
+  padding: 60px 0px;
+}
+.Wedding_dates .txt {
+  margin-bottom: 20px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+}
+tbody {
+  text-align: center;
+}
+td,
+th,
+tr {
+  padding: 10px 0;
+}
+table tr {
+  padding: 10px;
+  border-bottom: 1px solid #e2d4c8;
+}
+table tr h6 {
+  color: #000;
+  margin-bottom: 0;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  text-align: right;
+  padding-right: 20px;
+}
+table tr h6 span {
+  color: #505050;
+  margin-bottom: 4px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 8px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  text-align: right;
+}
+table tr p {
+  font-family: "Cookie", cursive;
+  font-size: 25px;
+  color: #505050;
+  margin-bottom: 4px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: normal;
+  font-style: normal;
+}
+@media (min-width: 740px) {
+  .Wedding_dates .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .Wedding_dates .txt {
+    width: 50%;
+  }
+  .Wedding_dates .txt p {
+    padding-right: 40px;
+  }
+  .Wedding_dates table {
+    width: 40%;
+  }
+}
+
+/* Creative_Team */
+.Creative_Team {
+  padding-top: 90px;
+}
+.Creative_Team .flex_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+@media (max-width: 700px) {
+  .Creative_Team .flex_card {
+    flex-direction: column;
+  }
+}
+.Creative_Team .card {
+  width: 49.5%;
+  overflow: hidden;
+  transition: var(--transition);
+}
+@media (max-width: 700px) {
+  .Creative_Team .card {
+    width: 100%;
+  }
+}
+.Creative_Team .txt {
+  text-align: center;
+  padding: 25px 0px;
+  height: 112px;
+  overflow: hidden;
+}
+.Creative_Team .flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 25px 0px;
+  bottom: -44px;
+  height: 112px;
+  background-color: var(--color_fff);
+  width: 100%;
+  transition: var(--transition);
+}
+.Creative_Team .card:hover .flex {
+  bottom: 67px;
+}
+.Creative_Team .flex_icons {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  position: relative;
+  /* bottom: 20px; */
+}
+.Creative_Team .flex_icons a {
+  color: var(--main_color);
+}
