@@ -24,7 +24,7 @@
   <div class="mb-3">
       <label for="actual_price" class="form-label">Actual Price</label>
       <input type="text" class="form-control" name="actual_price" required id="actual_price"  placeholder="Enter A Hall actual_price">
-      @error('price')
+      @error('actual_price')
       <span class="text-danger">{{$message}}</span>
       @enderror
   </div>
@@ -37,7 +37,7 @@
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Price</label>
-    <input type="text" class="form-control" name="price" required id="exampleInputPassword1"  placeholder="Enter A Hall Price">
+    <input type="number" class="form-control" name="price" required id="exampleInputPassword1"  placeholder="Enter A Hall Price">
     @error('price')
       <span class="text-danger">{{$message}}</span>
     @enderror

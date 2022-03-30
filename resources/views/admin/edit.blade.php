@@ -42,7 +42,7 @@
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Price</label>
-    <input type="text" class="form-control" name="price" id="exampleInputPassword1" value="{{$hall->price}}" >
+    <input type="number" class="form-control" name="price" id="exampleInputPassword1" value="{{$hall->price}}" >
     @error('price')
       <span class="text-danger">{{$message}}</span>
     @enderror

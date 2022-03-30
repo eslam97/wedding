@@ -17,4 +17,11 @@ class Hall extends Model
         'actual_price'
     ];
 
+        ############################ relations ########################
+
+        public function endpayment(){
+           return $this->hasMany('App\Models\Endpayment', 'hall_id', 'id');
+        }
+        ###########################end relations#######################
+
 }

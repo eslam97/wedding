@@ -10,7 +10,7 @@ use App\Models\User;
 class UserController extends Controller
 {
     public function index(){
-        $users = User::select('id','first_name', 'email', 'is_admin')->paginate(pagination_count);
+        $users = User::select('id','first_name', 'email', 'is_admin')->where('id', '<>', auth()->user()->id)->paginate(pagination_count);
         return view('admin.users', compact('users'));
     }
     public function changeUserStatus($id){

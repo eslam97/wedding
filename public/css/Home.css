@@ -15,13 +15,13 @@
 
 /*start aside*/
 aside{
-    width: 250px;
+    width: 220px;
     height: 100vh;
     position: fixed;
     background: var(--main_color);
     bottom: 0;
-    right: 0;
-    border-radius: 10px 0 0 10px;
+    left: 0;
+    border-radius: 0 10px 10px 0;
     z-index: 10;
   }
   aside nav{
@@ -40,7 +40,7 @@ aside{
   aside nav ul a li:hover {
     color: #000;
     background: rgb(255 255 255);
-    border-radius: 0.5em 0em 0em 0.5em;
+    border-radius: 0em 0.5em 0.5em 0em;
   }
   
   aside nav ul a{
@@ -159,6 +159,17 @@ aside{
     width: 28%;
   }
 }
+.btn-outline-primary{
+  color: var(--main_color);
+  border-color: var(--main_color);
+}
+.btn-outline-primary:hover{
+  color: #fff;
+  background-color: var(--main_color);
+  border-color: var(--main_color);
+
+}
+
 /* About */
 .About {
   background-color: var(--main_background_color);

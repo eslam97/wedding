@@ -11,6 +11,7 @@ use App\Traits\WeddingTrait;
 
 class DashboardController extends Controller
 {
+    use WeddingTrait;
     public function index(){
         $halls = Hall::select('id','name', 'master_img', 'desc', 'price', 'actual_price')->paginate(pagination_count);
         return view('admin.dashboard', compact('halls'));
@@ -19,7 +20,6 @@ class DashboardController extends Controller
         return view('admin.create');
     }
     public function store(DashboardRequest $request){
-        var_dump($$request);
         try {
             //validation external
             // save photo in folder

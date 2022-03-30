@@ -39,7 +39,8 @@ Route::group(['prefix'=>'admin', 'namespace'=>'App\Http\Controllers\Admin', 'mid
     ######################end blog##############
     ##########################start payment########################
     Route::get('/payment', 'PaymentController@index')->name('payment');
-
+    Route::get('/changeStatus/{id}', 'PaymentController@changeStatus')->name('changestatus');
+    Route::get('/changeStatusR/{id}', 'PaymentController@changeStatusRefuse')->name('changestatusRefuse');
     ########################end payment#########################
 
 });

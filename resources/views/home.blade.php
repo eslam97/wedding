@@ -4,7 +4,30 @@
 @include('user.includes.header')
     <!-- start_Home -->
     <div class="start_home">
+    @if(auth()->user()->is_admin == 1)
+    <a href="{{route('dashboard')}}" style="width: 85%;
+    padding: 12px 0px;
+    margin: 20px auto;
+    background-color: var(--main_color);
+    color: var(--color_fff);
+    border: none;
+    text-align: center;
+    transition: var(--transition);
+    cursor: pointer;">My Dashboard<a>
+    @endif
+            <a href="{{route('invoice.index')}}" style="width: 85%;
+    padding: 12px 0px;
+    margin: 20px auto;
+    background-color: var(--main_color);
+    color: var(--color_fff);
+    border: none;
+    text-align: center;
+    transition: var(--transition);
+    cursor: pointer;">My Invocies<a>
+
+
       <div class="container">
+
         <div class="img">
           <img src="{{URL::asset('img/2.jpg')}}" alt="" />
         </div>

@@ -33,7 +33,7 @@ class OfferController extends Controller
                         'amount' => $payment_status['amount'],
                         'desc' => $payment_status['result']['description'],
                         'user_id' => auth()->user()->id,
-                        'hall_id' =>1,
+                        'hall_id' =>$hall->id,
                          'status_payment' => null // pending
                     ]);
 
@@ -46,8 +46,7 @@ class OfferController extends Controller
             }
             return view('user.details', compact('hall'));
         }catch(\Exception $ex){
-            return $ex;
-            //return redirect()->route('offer.all')->with('error', 'please try again later');
+            return redirect()->route('offer.all')->with('error', 'please try again later');
 
         }
 

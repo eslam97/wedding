@@ -24,7 +24,7 @@ class DashboardRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=> 'required|max:191|unique:halls_without:id',
+            'name'=> 'required|max:191|unique:halls',
             'img' => 'required_without:id|mimes:jpg,jpeg,png',
             'price' => 'required|integer',
             'actual_price' => 'required'

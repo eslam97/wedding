@@ -35,3 +35,10 @@ Route::group(['prefix'=>'offers', 'namespace'=>'App\Http\Controllers\User', 'mid
 
 });
 ##################### End Payment #########################
+############################ begin invoices#######################
+Route::group(['prefix'=>'invoices', 'namespace'=>'App\Http\Controllers\User', 'middleware'=>'auth'], function(){
+    Route::get('/', 'InvoiceController@index')->name('invoice.index');
+    Route::get('/show/{id}', 'InvoiceController@show')->name('invoice.show');
+
+});
+#############################end invoces#########################
