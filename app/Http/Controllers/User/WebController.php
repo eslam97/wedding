@@ -30,4 +30,7 @@ class WebController extends Controller
         $blogs = Blog::select('name','number','desc', 'img')->paginate(pagination_count);
         return view('user.blog',compact('blogs'));
     }
+        public function faq(){
+        return view('user.services');
+    }
 }

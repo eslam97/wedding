@@ -526,4 +526,16 @@ table tr p {
   .Latest_News .txt h3 {
     font-size: 35px;
   }
+  .wpwl-form-card{
+    min-width: 100% !important;
+    margin-top: 30%;
+  }
+  form .btn-primary{
+    background-color:  var(--main_color);
+    border-color:  var(--main_color);
+  }
+  form .btn-primary:hover{
+    background-color:  var(--main_color);
+    border-color:  var(--main_color);
+  }
 }

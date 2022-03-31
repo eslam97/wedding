@@ -22,7 +22,7 @@ class Endpayments extends Migration
             $table->text('desc');
             $table->integer('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->boolean('status_payment')->default(null)->comment('0=>refused 1=>accepted ');
+            $table->boolean('status_payment')->default(null)->comment('0=>refused 1=>accepted ')->nullable();
             $table->integer('hall_id');
             $table->foreign('hall_id')->references('id')->on('halls')->onDelete('cascade');
             $table->timestamps();

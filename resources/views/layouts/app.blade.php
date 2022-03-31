@@ -47,7 +47,7 @@
             <li>
               <a href="{{route('portfolio')}}" class="link__Menu">Portfolio</a>
             </li>
-            <li><a href="{{route('offer.all')}}" class="link__Menu">Contact</a></li>
+            <li><a href="{{route('offer.all')}}" class="link__Menu">Booking</a></li>
             <li><a href="{{route('webblog')}}" class="link__Menu">Blog</a></li>
                                     <!-- Authentication Links -->
                                     @guest

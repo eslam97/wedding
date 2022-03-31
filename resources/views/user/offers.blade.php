@@ -35,12 +35,10 @@
                 @foreach($halls as $hall)
                         <div class="card" style='width:20%; margin-right:25px; margin-bottom:25px'>
                             <div class="card-body text-center">
-
                                 <h1 class="mt-0 mb-1 mb-2" style='text-align:center;'>{{$hall -> name}}
                                 </h1>
                                 <p class="grey-text mb-2" style='font-size:16px;text-align:center'>{{$hall -> desc}}</p>
                                 <p class="grey-text mb-2" style='font-weight: bold;text-align:center'>{{$hall -> price}}</p>
-
                                 <img style="width:100%; height:200px;" src="{{asset('img/halls/' . $hall->master_img)}}">
 
                                 <br>

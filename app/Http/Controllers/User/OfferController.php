@@ -46,11 +46,14 @@ class OfferController extends Controller
             }
             return view('user.details', compact('hall'));
         }catch(\Exception $ex){
-            return redirect()->route('offer.all')->with('error', 'please try again later');
+            return redirect()->route('user.details')->with('error', 'please try again later');
 
         }
 
     }
+
+
+    
     private function getPaymentStatus($id, $resourcePath){
         $url = "https://eu-test.oppwa.com/";
         $url .= $resourcePath ;

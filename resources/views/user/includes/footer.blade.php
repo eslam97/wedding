@@ -16,11 +16,11 @@
           <div class="coulmn_two">
             <h3>Useful Links</h3>
             <ul>
-              <li><a href="#">> Home</a></li>
-              <li><a href="#">> About</a></li>
-              <li><a href="#">> services</a></li>
-              <li><a href="#">> protfolio</a></li>
-              <li><a href="#">> F.A.Qs</a></li>
+              <li><a href="{{route('home')}}">> Home</a></li>
+              <li><a href="{{route('about')}}">> About</a></li>
+              <li><a href="{{route('services')}}">> services</a></li>
+              <li><a href="{{route('portfolio')}}">> protfolio</a></li>
+              <li><a href="{{route('faq')}}">> F.A.Qs</a></li>
             </ul>
           </div>
           <div class="coulmn_three">

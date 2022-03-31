@@ -3,33 +3,33 @@
 @section('content')
 @include('user.includes.header')
     <!-- start_Home -->
+
     <div class="start_home">
-    @if(auth()->user()->is_admin == 1)
-    <a href="{{route('dashboard')}}" style="width: 85%;
-    padding: 12px 0px;
-    margin: 20px auto;
-    background-color: var(--main_color);
-    color: var(--color_fff);
-    border: none;
-    text-align: center;
-    transition: var(--transition);
-    cursor: pointer;">My Dashboard<a>
-    @endif
-            <a href="{{route('invoice.index')}}" style="width: 85%;
-    padding: 12px 0px;
-    margin: 20px auto;
-    background-color: var(--main_color);
-    color: var(--color_fff);
-    border: none;
-    text-align: center;
-    transition: var(--transition);
-    cursor: pointer;">My Invocies<a>
-
-
+    <div>
+      @if(auth()->user()->is_admin == 1)
+<a href="{{route('dashboard')}}" style="width: 80%;
+padding: 12px 0px;
+margin: 20px auto;
+background-color: var(--main_color);
+color: var(--color_fff);
+border: none;
+text-align: center;
+transition: var(--transition);
+cursor: pointer;">My Dashboard</a>
+@endif
+        <a href="{{route('invoice.index')}}" style="width: 80%;
+padding: 12px 0px;
+margin: 20px auto;
+background-color: var(--main_color);
+color: var(--color_fff);
+border: none;
+text-align: center;
+transition: var(--transition);
+cursor: pointer;">My Invocies</a>
+      </div>
       <div class="container">
-
         <div class="img">
-          <img src="{{URL::asset('img/2.jpg')}}" alt="" />
+          <img src="img/2.jpg" alt="" />
         </div>
         <div class="txt">
           <h2>To Know Us is to Love Us!</h2>
@@ -77,7 +77,7 @@
           </p>
         </div>
         <div class="img">
-          <img src="{{URL::asset('img/about.jpg ')}}" alt="" />
+          <img src="img/about.jpg" alt="" />
         </div>
       </div>
     </div>
@@ -124,7 +124,7 @@
           <div class="card">
             <div class="txt_top">
               <div class="img">
-                <img src="{{URL::asset('img/Clint_1.jpg')}}" alt="" />
+                <img src="img/Clint_1.jpg" alt="" />
               </div>
               <div class="txt">
                 <h3>Eloise & Michael</h3>
@@ -140,7 +140,7 @@
           <div class="card">
             <div class="txt_top">
               <div class="img">
-                <img src="{{URL::asset('img/clint_2.jpg')}}" alt="" />
+                <img src="img/clint_2.jpg" alt="" />
               </div>
               <div class="txt">
                 <h3>Eloise & Michael</h3>
@@ -156,7 +156,7 @@
           <div class="card">
             <div class="txt_top">
               <div class="img">
-                <img src="{{URL::asset('img/clint_2.jpg')}}" alt="" />
+                <img src="img/clint_2.jpg" alt="" />
               </div>
               <div class="txt">
                 <h3>Eloise & Michael</h3>
@@ -172,7 +172,7 @@
           <div class="card">
             <div class="txt_top">
               <div class="img">
-                <img src="{{URL::asset('img/clint_2.jpg')}}" alt="" />
+                <img src="img/clint_2.jpg" alt="" />
               </div>
               <div class="txt">
                 <h3>Eloise & Michael</h3>
@@ -194,7 +194,7 @@
         <h2 class="hadding">Latest News</h2>
         <div class="card">
           <div class="img">
-            <img src="{{URL::asset('img/a.jpg')}}" alt="" />
+            <img src="img/a.jpg" alt="" />
           </div>
           <div class="txt">
             <div class="data">
@@ -221,7 +221,7 @@
             </div>
           </div>
           <div class="img">
-            <img src="{{URL::asset('img/a.jpg')}}" alt="" />
+            <img src="img/a.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -230,15 +230,14 @@
     <div class="prand">
       <div class="container">
         <div class="grid">
-          <img src="{{URL::asset('img/1_end.jpg')}}" alt="" />
-          <img src="{{URL::asset('img/2_end.jpg')}}" alt="" />
-          <img src="{{URL::asset('img/3_end.jpg')}}" alt="" />
-          <img src="{{URL::asset('img/4_end.jpg')}}" alt="" />
-          <img src="{{URL::asset('img/end_5.jpg')}}" alt="" />
+          <img src="img/1_end.jpg" alt="" />
+          <img src="img/2_end.jpg" alt="" />
+          <img src="img/3_end.jpg" alt="" />
+          <img src="img/4_end.jpg" alt="" />
+          <img src="img/end_5.jpg" alt="" />
         </div>
       </div>
     </div>
-    <!-- footer -->
     @include('user.includes.footer')
     <div class="btn_top">
       <i class="icon-arrow-up"></i>

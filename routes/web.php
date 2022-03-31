@@ -25,12 +25,14 @@ Route::get('/about', [App\Http\Controllers\User\WebController::class, 'about'])-
 Route::get('/services', [App\Http\Controllers\User\WebController::class, 'services'])->name('services');
 Route::get('/portfolio', [App\Http\Controllers\User\WebController::class, 'portfolio'])->name('portfolio');
 Route::get('/webblog', [App\Http\Controllers\User\WebController::class, 'webblog'])->name('webblog');
+Route::get('/faq', [App\Http\Controllers\User\WebController::class, 'faq'])->name('faq');
 
-Route::get('/', 'App\Http\Controllers\User\OfferController@index')->name('offer.all');
+Route::get('/contactus', 'App\Http\Controllers\User\OfferController@index')->name('offer.all');
 
 ##################### Begin Payment #########################
 Route::group(['prefix'=>'offers', 'namespace'=>'App\Http\Controllers\User', 'middleware'=>'auth'], function(){
     Route::get('/details/{halls_id}', 'OfferController@show')->name('offer.show');
+
     Route::get('/getcheckoutid', 'PaymentController@getCheckoutId')->name('offers.checkout');
 
 });

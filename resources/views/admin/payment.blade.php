@@ -34,14 +34,15 @@
         <td>{{$endpayment->amount}}</td>
         <td>{{$endpayment->hall->actual_price}}</td>
         <td class="d-flex justify-content-around">
-          @if($endpayment->status_payment == null)
+          @if($endpayment->status_payment === null)
             <a href="{{route('changestatus', $endpayment->id)}}" class="btn btn-success">Approve</a>
             <a onclick="return confirm('are you sure?')" href="{{route('changestatusRefuse', $endpayment->id)}}" class="btn btn-danger">Refuse</a>
-          @elseif($endpayment->status_payment == 1)
+            @elseif($endpayment->status_payment == 1)
           <a disabled href="#" class="btn btn-success">Approved</a>
           @elseif($endpayment->status_payment == 0)
           <a disabled href="#" class="btn btn-danger">Refused</a>
           @endif
+          
 
 
 

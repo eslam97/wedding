@@ -19,7 +19,6 @@ class Users extends Migration
             $table->string('last_name');
             $table->string('email')->unique();
             $table->integer('phone')->unique();
-            $table->string('address')->nullable();
             $table->boolean('is_admin')->default(0)->comment('0=>user 1=>admin ');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
