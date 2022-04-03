@@ -538,4 +538,16 @@ table tr p {
     background-color:  var(--main_color);
     border-color:  var(--main_color);
   }
+  [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled){
+    color: #fff;
+  }
+
+  /*pagination*/
+  .page-link{
+    color:var(--main_color);
+  }
+  .page-item.active .page-link{
+    background-color: var(--main_color);
+    border-color: var(--main_color);
+  }
 }

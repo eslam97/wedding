@@ -46,6 +46,10 @@
 
   </tbody>
 </table>
+{{-- Pagination --}}
+        <div class="d-flex justify-content-center">
+            {{ $halls->links() }}
+        </div>
 
 </div>
 @endsection

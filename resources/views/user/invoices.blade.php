@@ -17,6 +17,7 @@
       <th scope="col">Invoice Number</th>
       <th scope="col">Hall Name</th>
       <th scope="col">Price</th>
+      <th scope="col">Address</th>
       <th scope="col">Status</th>
       <th scope="col">Progress</th>
 
@@ -28,10 +29,11 @@
     <?php $i++?>
     <tr>
       <td>{{$i}}</td>
-      <td>{{$invoice->invoce->name}}</td>
-      <td>{{$invoice->invoce->numberofinvoce}}</td>
+      <td>{{$invoice->invoce['name']}}</td>
+      <td>{{$invoice->invoce['numberofinvoce']}}</td>
       <td>{{$invoice->hall['name']}}</td>
       <td>{{$invoice->amount}}</td>
+      <td>{{$invoice->details['address']}}</td>
       <td>{{$invoice->getStatus_payment()}}</td>
       <td class="d-flex justify-content-around"><a href="{{route('invoice.show', $invoice->id)}}" class="btn btn-secondary">Show</a>
 
@@ -40,6 +42,10 @@
 
   </tbody>
 </table>
+{{-- Pagination --}}
+        <div class="d-flex justify-content-center">
+            {{ $invoices->links() }}
+        </div>
     @else
       <div style="text-align: center;
     font-size: 20px;

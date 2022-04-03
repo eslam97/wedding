@@ -2,7 +2,7 @@
 @extends('layouts.app')
 @section('body')
 <div class="container-new">
-          <form  method="post" enctype='multipart/form-data'  style='margin-top:5%;'>
+          <form  method="post" enctype='multipart/form-data'  style='margin-top:10%;'>
           {{ method_field('POST') }}
               @csrf
   <div class="mb-3">
@@ -18,11 +18,19 @@
     <input type="text" class="form-control" name="price" value='{{$invoice->hall["name"]}}' id="exampleInputPassword1" disabled>
   </div>
     <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Your Address</label>
+    <input type="text" class="form-control" name="address" value='{{$invoice->details->address}}' id="exampleInputPassword1" disabled>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Your Phone</label>
+    <input type="text" class="form-control" name="price" value='{{$invoice->details->phone}}' id="exampleInputPassword1" disabled>
+  </div>
+    <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">price</label>
     <input type="text" class="form-control" name="price" value='{{$invoice->amount}}' id="exampleInputPassword1" disabled>
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Actual Price</label>
+    <label for="exampleInputPassword1" class="form-label">Price for meter</label>
     <input type="text" class="form-control" name="price" value='{{$invoice->hall["actual_price"]}}' id="exampleInputPassword1" disabled>
   </div>
   <div class="mb-3">

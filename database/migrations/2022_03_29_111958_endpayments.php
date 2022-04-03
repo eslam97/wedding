@@ -25,6 +25,10 @@ class Endpayments extends Migration
             $table->boolean('status_payment')->default(null)->comment('0=>refused 1=>accepted ')->nullable();
             $table->integer('hall_id');
             $table->foreign('hall_id')->references('id')->on('halls')->onDelete('cascade');
+            $table->integer('details_id');
+            $table->foreign('details_id')->references('id')->on('details')->onDelete('cascade');
+            $table->integer('team_id')->nullable();
+            $table->foreign('team_id')->references('id')->on('teams')->onDelete('cascade');
             $table->timestamps();
             });
     }

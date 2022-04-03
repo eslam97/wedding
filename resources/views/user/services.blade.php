@@ -11,35 +11,19 @@
       <div class="container">
         <h2 class="title">Services</h2>
         <div class="grid">
+        @if(isset($halls) && $halls -> count() > 0)
+            @foreach($halls as $hall)
           <div class="card">
-            <img src="../img/Services-1.jpg" alt="" />
+            <img src="{{asset('img/halls/' . $hall->master_img)}}" alt="" />
             <div class="txt">
               <div>
                 <h3>Weddings</h3>
-                <h2><a href="serviesCard_one.html">Wedding Planner</a></h2>
+                <h2><a href="{{route('offer.show',$hall->id)}}">{{$hall -> name}}</a></h2>
               </div>
             </div>
           </div>
-          <div class="card">
-            <img src="../img/Services-2.jpg" alt="" />
-            <div class="txt">
-              <div>
-                <h3>Weddings</h3>
-                <h2><a href="brithdayservises.html">brithday planner</a></h2>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <img src="../img/Services-2.jpg" alt="" />
-            <div class="txt">
-              <div>
-                <h3>Weddings</h3>
-                <h2>
-                  <a href="graduationservises.html">graduation planner</a>
-                </h2>
-              </div>
-            </div>
-          </div>
+          @endforeach
+        @endif
         </div>
       </div>
     </div>

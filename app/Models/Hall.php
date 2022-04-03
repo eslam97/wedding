@@ -22,6 +22,9 @@ class Hall extends Model
         public function endpayment(){
            return $this->hasMany('App\Models\Endpayment', 'hall_id', 'id');
         }
+        public function details(){
+            return $this->hasOne('App\Models\Details', 'hall_id', 'id');
+        }
         ###########################end relations#######################
 
 }

@@ -1,6 +1,7 @@
 @extends('layouts.head')
-@extends('layouts.app')
 @section('body')
+@extends('layouts.app')
+
 <div class="container-new">
     @include('admin.includes.alerts.success')
     @include('admin.includes.alerts.error')
@@ -25,7 +26,7 @@
   </div>
 
   <div class="mb-3">
-      <label for="actual_price" class="form-label">Actual Price</label>
+      <label for="actual_price" class="form-label">Price for meter</label>
       <input type="text" class="form-control" name="actual_price"  value="{{$hall->actual_price}}"id="actual_price"  placeholder="Enter A Hall actual_price">
       @error('actual_price')
       <span class="text-danger">{{$message}}</span>

@@ -51,7 +51,10 @@ class User extends Authenticatable
 
         ############################ relations ########################
         public function endpayment(){
-            return $this->hasMany('App/Models/EndPayment', 'user_id', 'id');
+            return $this->hasMany('App\Models\Endpayment', 'user_id', 'id');
+        }
+        public function details(){
+            return $this->hasOne('App\Models\Details', 'user_id', 'id');
         }
 
         ###########################end relations#######################

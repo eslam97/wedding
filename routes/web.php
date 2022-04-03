@@ -32,6 +32,7 @@ Route::get('/contactus', 'App\Http\Controllers\User\OfferController@index')->nam
 ##################### Begin Payment #########################
 Route::group(['prefix'=>'offers', 'namespace'=>'App\Http\Controllers\User', 'middleware'=>'auth'], function(){
     Route::get('/details/{halls_id}', 'OfferController@show')->name('offer.show');
+    Route::post('/details/store/{halls_id}', 'OfferController@store')->name('offer.store');
 
     Route::get('/getcheckoutid', 'PaymentController@getCheckoutId')->name('offers.checkout');
 

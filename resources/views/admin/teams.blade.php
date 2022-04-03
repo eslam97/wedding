@@ -8,7 +8,7 @@
     @include('admin.includes.aside')
 
           <div class="d-flex justify-content-around">
-            <a href="{{route('create.blog')}}" class='col-md-3 btn btn-outline-primary'>Add New Blog</a>
+            <a href="{{route('create.team')}}" class='col-md-3 btn btn-outline-primary'>Add New Team</a>
           </div>
 
           <table class="table">
@@ -16,23 +16,19 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
-      <th scope="col">Desc</th>
-      <th scope="col">Img</th>
       <th scope="col">Progress</th>
 
     </tr>
   </thead>
   <tbody>
     <?php $i=0 ?>
-    @foreach($blogs as $blog)
+    @foreach($teams as $team)
     <?php $i++?>
     <tr>
       <td>{{$i}}</td>
-      <td>{{$blog->name}}</td>
-      <td>{{$blog->desc}}</td>
-      <td><img style="width:100%; height:100px;" src="{{asset('img/blogs/' . $blog->img)}}" ></td>
-      <td class="d-flex justify-content-around"><a href="{{route('edit.blog', $blog->id)}}" class="btn btn-success">Edit</button>
-        <a onclick="return confirm('are you sure?')" href="{{route('delete.blog', $blog->id)}}" class="btn btn-danger">Delete</button></td>
+      <td>{{$team->name}}</td>
+      <td class="d-flex justify-content-around"><a href="{{route('edit.team', $team->id)}}" class="btn btn-success">Edit</button>
+        <a onclick="return confirm('are you sure?')" href="{{route('delete.team', $team->id)}}" class="btn btn-danger">Delete</button></td>
 
     </tr>
     @endforeach
@@ -41,7 +37,7 @@
 </table>
         {{-- Pagination --}}
         <div class="d-flex justify-content-center">
-            {{ $blogs->links() }}
+            {{ $teams->links() }}
         </div>
 
 </div>

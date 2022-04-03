@@ -27,4 +27,22 @@ class UserController extends Controller
             return redirect()->route('admin.users')->with('error', 'please try again later');
         }
     }
+    public function destroy($id){
+        try{
+            $user = User::find($id);
+            if(!$user){
+                return redirect()->route('admin.users')->with('error', 'this User is not exists');
+            }
+            $user->endpayment()->delete();
+            $user->details()->delete();
+            $user->delete();
+
+            return redirect()->route('admin.users')->with('success', 'this user is deleted successfuly');
+
+        }catch(\Exception $ex){
+            return redirect()->route('admin.users')->with('error', 'please try again later');
+        }
+
+
+    }
 }

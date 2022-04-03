@@ -5,7 +5,9 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Hall;
+use App\Models\Details;
 use App\Models\Endpayment;
+use App\Http\Requests\DetailsRequest;
 
 
 
@@ -14,7 +16,7 @@ class OfferController extends Controller
     public function index(){
 
         $halls = Hall::select('id','name', 'master_img', 'desc', 'price')->paginate(pagination_count);
-        return view('user.offers', compact('halls'));
+        return view('user.services', compact('halls'));
     }
     public function show($id){
         try{
@@ -22,10 +24,12 @@ class OfferController extends Controller
             if(!$hall){
                 return redirect()->route('offer.all')->with('error', 'this hall is not exists');
             }
+            $details =Details::orderBy('id', 'DESC')->first();
             if (request('id') && request('resourcePath')) {
                 $payment_status = $this->getPaymentStatus(request('id'), request('resourcePath'));
                 if (isset($payment_status['id'])) { //success payment id -> transaction bank id
                      $showSuccessPaymentMessage = true;
+
                      Endpayment::create([
                         'payment_status_id'=> $payment_status['id'],
                         'payment_type' => $payment_status['paymentType'],
@@ -34,6 +38,7 @@ class OfferController extends Controller
                         'desc' => $payment_status['result']['description'],
                         'user_id' => auth()->user()->id,
                         'hall_id' =>$hall->id,
+                        'details_id' => $details->id,
                          'status_payment' => null // pending
                     ]);
 
@@ -46,8 +51,23 @@ class OfferController extends Controller
             }
             return view('user.details', compact('hall'));
         }catch(\Exception $ex){
-            return redirect()->route('user.details')->with('error', 'please try again later');
+            return $ex;
+            return redirect()->route('offer.all')->with('error', 'please try again later');
 
+        }
+
+    }
+    public function store(DetailsRequest $request, $id){
+        $hall = Hall::find($id);
+        if($hall){
+            Details::create([
+                'address' => $request->address,
+                'phone' => $request->phone,
+                'user_id'=> auth()->user()->id,
+                'hall_id'=> $hall->id
+    
+    
+            ]);
         }
 
     }

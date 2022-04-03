@@ -30,12 +30,17 @@
       <td class="d-flex justify-content-around">
       
       <a onclick="return confirm('are you sure ?')" href="{{route('admin.users.status', $user->id)}}" class= " @if ($user->is_admin ==1) btn btn-danger @else btn btn-success @endif"  >@if ($user->is_admin ==1) Remove From Admin @else Make Admin @endif </button>
+      <a onclick="return confirm('are you To delete this person ?')" href="{{route('admin.users.destroy', $user->id)}}" class= "btn btn-danger"  >Delete </button>
 
     </tr>
     @endforeach
 
   </tbody>
 </table>
+{{-- Pagination --}}
+        <div class="d-flex justify-content-center">
+            {{ $users->links() }}
+        </div>
 
 </div>
 @endsection

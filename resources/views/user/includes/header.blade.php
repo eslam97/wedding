@@ -4,16 +4,16 @@
         <a href="#" class="Menu"><i class="icon-menu1"></i></a>
         <div class="nav_Menu">
           <ul>
-            <li><a href="{{route('home')}}" class="active link__Menu">Home</a></li>
-            <li><a href="{{route('about')}}" class="link__Menu">About</a></li>
+            <li><a href="{{route('home')}}" class="@if(Request::url() === 'http://localhost:8000/home')active @endif link__Menu">Home</a></li>
+            <li><a href="{{route('about')}}" class="@if(Request::url() === 'http://localhost:8000/about')active @endif link__Menu">About</a></li>
             <li>
-              <a href="{{route('services')}}" class="link__Menu">Services</a>
+              <a href="{{route('offer.all')}}" class="@if(Request::url() === 'http://localhost:8000/contactus')active @endif link__Menu">Services</a>
             </li>
             <li>
-              <a href="{{route('portfolio')}}" class="link__Menu">Portfolio</a>
+              <a href="{{route('portfolio')}}" class="@if(Request::url() === 'http://localhost:8000/portfolio')active @endif link__Menu">Portfolio</a>
             </li>
-            <li><a href="{{route('offer.all')}}" class="link__Menu">Booking</a></li>
-            <li><a href="{{route('webblog')}}" class="link__Menu">Blog</a></li>
+            <li><a href="#" class=" @if(Request::url() === 'http://localhost:8000/portfolio')active @endif link__Menu">Booking</a></li>
+            <li><a href="{{route('webblog')}}" class=" @if(Request::url() === 'http://localhost:8000/webblog')active @endif link__Menu">Blog</a></li>
                                     <!-- Authentication Links -->
                                     @guest
                             @if (Route::has('login'))
