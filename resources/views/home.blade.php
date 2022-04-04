@@ -6,7 +6,7 @@
 
     <div class="start_home">
     <div>
-      @if(auth()->user()->is_admin == 1)
+      @if(auth()->user()['is_admin'] == 1)
 <a href="{{route('dashboard')}}" style="width: 80%;
 padding: 12px 0px;
 margin: 20px auto;
@@ -17,6 +17,7 @@ text-align: center;
 transition: var(--transition);
 cursor: pointer;">My Dashboard</a>
 @endif
+@auth
         <a href="{{route('invoice.index')}}" style="width: 80%;
 padding: 12px 0px;
 margin: 20px auto;
@@ -26,6 +27,7 @@ border: none;
 text-align: center;
 transition: var(--transition);
 cursor: pointer;">My Invocies</a>
+@endauth
       </div>
       <div class="container">
         <div class="img">

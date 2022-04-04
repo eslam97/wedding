@@ -4,7 +4,7 @@
         <a href="#" class="Menu"><i class="icon-menu1"></i></a>
         <div class="nav_Menu">
           <ul>
-            <li><a href="{{url('/')}}" class="@if(Request::url() === 'http://localhost:8000/home')active @endif link__Menu">Home</a></li>
+            <li><a href="{{route('home')}}" class="@if(Request::url() === 'http://localhost:8000/home')active @endif link__Menu">Home</a></li>
             <li><a href="{{route('about')}}" class="@if(Request::url() === 'http://localhost:8000/about')active @endif link__Menu">About</a></li>
             <li>
               <a href="{{route('offer.all')}}" class="@if(Request::url() === 'http://localhost:8000/contactus')active @endif link__Menu">Services</a>
