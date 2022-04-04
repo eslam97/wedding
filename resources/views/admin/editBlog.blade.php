@@ -13,8 +13,8 @@
     <input type="text" class="form-control" name="id" id="exampleInputPassword1" value="{{$blog->id}}" hidden >
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" name="name" value="{{$blog->name}}" aria-describedby="emailHelp">
+    <label for="exampleInputEmail1" class="form-label">Number</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="number" value="{{$blog->number}}" aria-describedby="emailHelp">
     @error('name')
       <span class="text-danger">{{$message}}</span>
     @enderror
@@ -44,9 +44,5 @@
   <button type="submit" class="btn btn-primary">Save</button>
 </form>
 </div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script>
-    $('aside').height(($('aside').height())-($('nav').outerHeight()));
-    $('.container-new').css('width', ($('.container-new').outerWidth()) - ($("aside").outerWidth()));
-</script>
+
 @endsection

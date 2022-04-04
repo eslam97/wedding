@@ -68,7 +68,7 @@ class DashboardController extends Controller
                 ]);
             }
             // insert into db
-            $data = $request->except('id', 'master_img','name');
+            $data = $request->except('id', 'master_img');
             $hall->update($data);
             //return with success
             return redirect()->route('dashboard')->with('success', 'this hall is updated successfuly');

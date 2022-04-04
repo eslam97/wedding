@@ -4,7 +4,7 @@
 @include('user.includes.header')
     <!-- main_about -->
     <div class="main_about section" style="z-index: -1">
-      <h2>Welcome</h2>
+      <h2>Welcom</h2>
     </div>
     <!-- About Bethany -->
     <div class="About">

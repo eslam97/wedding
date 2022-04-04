@@ -1,12 +1,211 @@
+@extends('layouts.user')
 @extends('layouts.head')
-@extends('layouts.app')
-@section('body')
-<div class="container">
-    @include('admin.includes.alerts.success')
-    @include('admin.includes.alerts.error')
-    @auth
-            <form method="post">
-          {{ method_field('POST') }}
+
+
+@section('content')
+@include('user.includes.header')
+@if(Request::url() === 'http://localhost:8000/offers/details/1')
+<img src="{{asset('img/img_container_clinte.jpg')}}" alt="" class="" />
+    <div class="txt container" style="padding-top: 70px">
+      <h2>Wedding Planner</h2>
+      <p>
+        Qurabit aliquet orci elit gene tristique lorem commodo vitae. Aliquam
+        tince felis the gravida aliquam, neque libero hendrerit magna, sit amet
+        mollis lacus quam maurisine. Aliquam erat the druna volutpat. Wedding
+        ultricies nibh non dolor maximus sceleue. Integer molliser fauci neque
+        nec tincidunte. Aliquam erate the volutpat. Praeser tempor maladi quam,
+        nec rutrum arcu ornare sed duru egiter ligula at nibh viverra ultricies.
+      </p>
+      <br />
+      <p>
+        Destination aliue orci elit gene tristique lorem commodo vitae. Aliquam
+        tince felis the gravia aliquam neque libero hendrerit magna, sit amet
+        mollis lacus quam maurisine. Aliquam erat the druna volutpat. Wedding
+        ultricies nibh non dolor maximus sceleue. Integer molliser fauci neque
+        nec tincidunte. Aliquam erate the volutpat. Praeser tempor maladi quam,
+        nec rutrum. Nunc lorem vivense design torral ipsum dolar a ranish
+        maximus.
+      </p>
+      <br />
+      <h3>Package Includes</h3>
+      <ul>
+        <li>1.Weddings & Events Workbook</li>
+        <li>2.Unlimited access to expert wedding advice (via e-mail)</li>
+        <li>3.Access to Preferred Vendors List</li>
+        <li>4.Wedding Assistant for wedding dayc</li>
+        <li>
+          5.Oversee and help with ceremony/reception site set up & tear down
+        </li>
+        <li>6.Review of Vendor contracts</li>
+        <li>
+          7.Distribute final payments and gratuities to vendors as necessary
+        </li>
+      </ul>
+    </div>
+    <div class="grid_img container" style="padding-top: 70px">
+      <div class="card">
+        <div class="img">
+          <img src="{{asset('img/b.jpg')}}" alt="" />
+        </div>
+        <i class="icon-heart"> </i>
+      </div>
+      <div class="card">
+        <div class="img">
+          <img src="{{asset('img/a.jpg')}}" alt="" />
+        </div>
+        <i class="icon-heart"> </i>
+      </div>
+      <div class="card">
+        <div class="img">
+          <img src="{{asset('img/a.jpg')}}" alt="" />
+        </div>
+        <i class="icon-heart"> </i>
+      </div>
+      <div class="card">
+        <div class="img">
+          <img src="{{asset('img/a.jpg')}}" alt="" />
+        </div>
+        <i class="icon-heart"> </i>
+      </div>
+
+    </div>
+    @endif
+    @if(Request::url() === 'http://localhost:8000/offers/details/2')
+        <img src="{{asset('img/img_container_clinte.jpg')}}" alt="" class="" />
+    <div class="txt container" style="padding-top: 70px">
+      <h2>brathday planner</h2>
+      <p>
+        Qurabit aliquet orci elit gene tristique lorem commodo vitae. Aliquam
+        tince felis the gravida aliquam, neque libero hendrerit magna, sit amet
+        mollis lacus quam maurisine. Aliquam erat the druna volutpat. Wedding
+        ultricies nibh non dolor maximus sceleue. Integer molliser fauci neque
+        nec tincidunte. Aliquam erate the volutpat. Praeser tempor maladi quam,
+        nec rutrum arcu ornare sed duru egiter ligula at nibh viverra ultricies.
+      </p>
+      <br />
+      <p>
+        Destination aliue orci elit gene tristique lorem commodo vitae. Aliquam
+        tince felis the gravia aliquam neque libero hendrerit magna, sit amet
+        mollis lacus quam maurisine. Aliquam erat the druna volutpat. Wedding
+        ultricies nibh non dolor maximus sceleue. Integer molliser fauci neque
+        nec tincidunte. Aliquam erate the volutpat. Praeser tempor maladi quam,
+        nec rutrum. Nunc lorem vivense design torral ipsum dolar a ranish
+        maximus.
+      </p>
+      <br />
+      <h3>Package Includes</h3>
+      <ul>
+        <li>1.Weddings & Events Workbook</li>
+        <li>2.Unlimited access to expert wedding advice (via e-mail)</li>
+        <li>3.Access to Preferred Vendors List</li>
+        <li>4.Wedding Assistant for wedding dayc</li>
+        <li>
+          5.Oversee and help with ceremony/reception site set up & tear down
+        </li>
+        <li>6.Review of Vendor contracts</li>
+        <li>
+          7.Distribute final payments and gratuities to vendors as necessary
+        </li>
+      </ul>
+    </div>
+    <div class="grid_img container" style="padding-top: 70px">
+      <div class="card">
+        <div class="img">
+          <img src="{{asset('img/b.jpg')}}" alt="" />
+        </div>
+        <i class="icon-heart"> </i>
+      </div>
+      <div class="card">
+        <div class="img">
+          <img src="{{asset('img/a.jpg')}}" alt="" />
+        </div>
+        <i class="icon-heart"> </i>
+      </div>
+      <div class="card">
+        <div class="img">
+          <img src="{{asset('img/a.jpg')}} " alt="" />
+        </div>
+        <i class="icon-heart"> </i>
+      </div>
+      <div class="card">
+        <div class="img">
+          <img src="{{asset('img/a.jpg')}}" alt="" />
+        </div>
+        <i class="icon-heart"> </i>
+      </div>
+    </div>
+    @endif
+        @if(Request::url() === 'http://localhost:8000/offers/details/3')
+        <img src="{{asset('img/img_container_clinte.jpg')}}" alt="" class="" />
+    <div class="txt container" style="padding-top: 70px">
+      <h2>graduation planner</h2>
+      <p>
+        Qurabit aliquet orci elit gene tristique lorem commodo vitae. Aliquam
+        tince felis the gravida aliquam, neque libero hendrerit magna, sit amet
+        mollis lacus quam maurisine. Aliquam erat the druna volutpat. Wedding
+        ultricies nibh non dolor maximus sceleue. Integer molliser fauci neque
+        nec tincidunte. Aliquam erate the volutpat. Praeser tempor maladi quam,
+        nec rutrum arcu ornare sed duru egiter ligula at nibh viverra ultricies.
+      </p>
+      <br />
+      <p>
+        Destination aliue orci elit gene tristique lorem commodo vitae. Aliquam
+        tince felis the gravia aliquam neque libero hendrerit magna, sit amet
+        mollis lacus quam maurisine. Aliquam erat the druna volutpat. Wedding
+        ultricies nibh non dolor maximus sceleue. Integer molliser fauci neque
+        nec tincidunte. Aliquam erate the volutpat. Praeser tempor maladi quam,
+        nec rutrum. Nunc lorem vivense design torral ipsum dolar a ranish
+        maximus.
+      </p>
+      <br />
+      <h3>Package Includes</h3>
+      <ul>
+        <li>1.Weddings & Events Workbook</li>
+        <li>2.Unlimited access to expert wedding advice (via e-mail)</li>
+        <li>3.Access to Preferred Vendors List</li>
+        <li>4.Wedding Assistant for wedding dayc</li>
+        <li>
+          5.Oversee and help with ceremony/reception site set up & tear down
+        </li>
+        <li>6.Review of Vendor contracts</li>
+        <li>
+          7.Distribute final payments and gratuities to vendors as necessary
+        </li>
+      </ul>
+    </div>
+    <div class="grid_img container" style="padding-top: 70px">
+      <div class="card">
+        <div class="img">
+          <img src="{{asset('img/a.jpg')}}" alt="" />
+        </div>
+        <i class="icon-heart"> </i>
+      </div>
+      <div class="card">
+        <div class="img">
+          <img src="{{asset('img/a.jpg')}}" alt="" />
+        </div>
+        <i class="icon-heart"> </i>
+      </div>
+      <div class="card">
+        <div class="img">
+          <img src="{{asset('img/a.jpg')}}" alt="" />
+        </div>
+        <i class="icon-heart"> </i>
+      </div>
+      <div class="card">
+        <div class="img">
+          <img src="{{asset('img/a.jpg')}}" alt="" />
+        </div>
+        <i class="icon-heart"> </i>
+      </div>
+    </div>
+    @endif
+
+    <div class="container">
+
+            
+    <form method="post">
+    {{ method_field('POST') }}
               @csrf
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Address</label>
@@ -26,11 +225,12 @@
             <button id="details"
                 role="button" class="btn px-3 waves-effect waves-light"style='background-color:var(--main_color); color:#fff'> Save
             </button>
+    </form>
 
-            </form>
-            @endauth
 
-    <div class="row d-flex justify-content-center">
+    </div>
+    <div class="container row d-flex justify-content-center">
+
             <!--Grid column-->
             @if($hall)
             
@@ -83,22 +283,20 @@
                 </div>
 
         @endif
-        <!--Grid column-->
-
-            <div class="col-md-6">
+    </div>
 
 
-            </div>
 
-        </div>
-      </div>
 
-@endsection
-@section('script')
-<script>
 
-  
-    $('#details').on('click', function(e){
+    <!-- footer -->
+    @include('user.includes.footer')
+    <div class="btn_top">
+      <i class="icon-arrow-up"></i>
+      <p>Top</p>
+    </div>
+    <script>
+            $('#details').on('click', function(e){
         e.preventDefault();
         $.ajax({
             type: 'post',
@@ -147,5 +345,9 @@ $('#checkout').on('click', function(e){
             }
         });
         });
-        </script>
+
+    </script>
+
 @endsection
+
+
