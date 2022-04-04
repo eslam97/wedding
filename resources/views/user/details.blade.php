@@ -204,7 +204,7 @@
     <div class="container">
 
             
-    <form method="post">
+    <form method="post" style="padding-right: 20px;position: inherit;transform: translate(0%);margin: 25px auto">
     {{ method_field('POST') }}
               @csrf
             <div class="mb-3">

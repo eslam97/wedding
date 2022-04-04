@@ -24,6 +24,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/about', [App\Http\Controllers\User\WebController::class, 'about'])->name('about');
 Route::get('/services', [App\Http\Controllers\User\WebController::class, 'services'])->name('services');
 Route::get('/portfolio', [App\Http\Controllers\User\WebController::class, 'portfolio'])->name('portfolio');
+Route::get('/contact', [App\Http\Controllers\User\WebController::class, 'contact'])->name('contact');
 Route::get('/webblog', [App\Http\Controllers\User\WebController::class, 'webblog'])->name('webblog');
 Route::get('/faq', [App\Http\Controllers\User\WebController::class, 'faq'])->name('faq');
 

@@ -23,7 +23,7 @@ class WebController extends Controller
     }
     public function contact()
     {
-        return view('user.offers');
+        return view('user.contact');
     }
     public function webblog()
     {

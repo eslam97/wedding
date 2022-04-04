@@ -13,6 +13,13 @@
     @yield('body')
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <script src="{{URL::asset('js/q_a.js')}}"></script>
+    <script src="{{URL::asset('js/slick.min.js')}}"></script>
+    <script src="{{URL::asset('js/Main.js')}}"></script>
+    <script src="{{URL::asset('js/Home.js')}}"></script>
+    <script src="{{URL::asset('js/About.js')}}"></script>
     <script>
     $(document).ready(function(){
         $('aside').height(($('aside').height())-($('nav').outerHeight()));
